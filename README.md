@@ -2,7 +2,7 @@
 
 [![crates.io page](https://img.shields.io/crates/v/keytar.svg)](https://crates.io/crates/keytar)
 [![docs.rs page](https://docs.rs/keytar/badge.svg)](https://docs.rs/keytar/)
-![build](https://github.com/stoically/keytar/workflows/build/badge.svg)
+![build](https://github.com/stoically/keytar-rs/workflows/build/badge.svg)
 ![license: MIT](https://img.shields.io/crates/l/keytar.svg)
 
 [keytar](https://github.com/atom/node-keytar) bindings for Rust
