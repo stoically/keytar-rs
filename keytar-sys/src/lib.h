@@ -1,8 +1,6 @@
 #pragma once
 #include "rust/cxx.h"
 #include "node-keytar/src/keytar.h"
-#include <memory>
-#include <string>
 
 struct Password;
 

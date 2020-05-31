@@ -7,6 +7,8 @@ fn main() {
 
     let mut cxx = cxx_build::bridge("src/lib.rs");
 
+    let out_dir = env::var("OUT_DIR").unwrap();
+    let manifest_dir = env::var("CARGO_MANIFEST_DIR").unwrap();
     let target_os = env::var("CARGO_CFG_TARGET_OS").unwrap();
     match target_os.as_str() {
         "linux" => {
@@ -33,8 +35,10 @@ fn main() {
     }
 
     cxx.file("src/lib.cc")
+        .include(manifest_dir)
+        .include(out_dir)
         .flag_if_supported("-std=c++14")
-        .compile("keytar-rs");
+        .compile("keytar-sys");
 
     println!("cargo:rerun-if-changed=src/lib.rs");
     println!("cargo:rerun-if-changed=src/lib.h");

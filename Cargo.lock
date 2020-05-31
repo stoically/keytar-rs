@@ -25,8 +25,7 @@ dependencies = [
 [[package]]
 name = "cxx"
 version = "0.3.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "81bcd41a818fba05eb0e15ea4efb40eeeb88f50cf9582d8d179ae94af395e478"
+source = "git+https://github.com/stoically/cxx#a5a788f6d5040ec5e3a3e4aca90653d8fdaea8ee"
 dependencies = [
  "cc",
  "cxxbridge-macro",
@@ -36,8 +35,7 @@ dependencies = [
 [[package]]
 name = "cxx-build"
 version = "0.3.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "769e5aae88ee3418a13aeddd797250f8fba5c64e6f0698bc9a0914026ce539ad"
+source = "git+https://github.com/stoically/cxx#a5a788f6d5040ec5e3a3e4aca90653d8fdaea8ee"
 dependencies = [
  "anyhow",
  "cc",
@@ -50,8 +48,7 @@ dependencies = [
 [[package]]
 name = "cxxbridge-macro"
 version = "0.3.4"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "893d55e85fe7dec79fda1f2242fdf958015b5fe6c57d708e94fde21b6ed07531"
+source = "git+https://github.com/stoically/cxx#a5a788f6d5040ec5e3a3e4aca90653d8fdaea8ee"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -60,6 +57,13 @@ dependencies = [
 
 [[package]]
 name = "keytar"
+version = "0.1.1"
+dependencies = [
+ "keytar-sys",
+]
+
+[[package]]
+name = "keytar-sys"
 version = "0.1.1"
 dependencies = [
  "cc",

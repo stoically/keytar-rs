@@ -1,0 +1,24 @@
+[package]
+name = "keytar-sys"
+description = "cxx bindings to keytar"
+version = "0.1.1"
+authors = ["stoically <stoically@protonmail.com>"]
+keywords = ["keytar", "libsecret", "keychain", "credential-vault"]
+edition = "2018"
+repository = "https://github.com/stoically/keytar-rs"
+readme = "README.md"
+license = "MIT"
+
+[dependencies]
+cxx = { git = "https://github.com/stoically/cxx" }
+
+[build-dependencies]
+cxx-build = { git = "https://github.com/stoically/cxx" }
+pkg-config = "0.3.17"
+cc = "1.0.54"
+
+[features]
+docs-rs = []
+
+[package.metadata.docs.rs]
+features = ["docs-rs"]

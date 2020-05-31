@@ -1,3 +1,3 @@
-[submodule "node-keytar"]
-	path = node-keytar
+[submodule "keytar-sys/node-keytar"]
+	path = keytar-sys/node-keytar
 	url = https://github.com/atom/node-keytar.git
