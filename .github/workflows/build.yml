@@ -1,0 +1,39 @@
+name: build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    name: build
+    runs-on: ${{ matrix.config.os }}
+    strategy:
+      matrix:
+        config:
+          - { os: ubuntu-latest }
+          - { os: macos-latest }
+          - { os: windows-latest }
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: ubuntu
+        if: matrix.config.os == 'ubuntu-latest'
+        run: |
+          sudo apt install libsecret-1-dev xvfb dbus-x11 gnome-keyring
+
+          # `secret-tool` (https://gitlab.gnome.org/GNOME/libsecret) does not support creating keyrings,
+          # so we need to fall back to the deprecated `python-gnomekeyring`
+          sudo add-apt-repository 'deb http://archive.ubuntu.com/ubuntu xenial main restricted universe multiverse'
+          sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 40976EAF437D05B5 3B4FE6ACC0B21F32
+          sudo apt update
+          sudo apt install -t xenial python-gnomekeyring          
+          dbus-launch /usr/bin/python -c "import gnomekeyring;gnomekeyring.create_sync('login', '');"
+
+          Xvfb :99 &
+
+      - name: build
+        shell: bash
+        run: |
+          export DISPLAY=":99"
+          git submodule update --init
+          cargo test
+          cargo build

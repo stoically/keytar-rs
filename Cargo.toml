@@ -1,0 +1,18 @@
+[package]
+name = "keytar"
+description = "keytar bindings for Rust"
+version = "0.1.0"
+authors = ["stoically <stoically@protonmail.com>"]
+keywords = ["keytar", "libsecret", "keychain", "credential", "vault"]
+edition = "2018"
+repository = "https://github.com/stoically/keytar-rs"
+readme = "README.md"
+license = "MIT"
+
+[dependencies]
+cxx = "0.3.4"
+
+[build-dependencies]
+cxx-build = "0.3.4"
+pkg-config = "0.3.17"
+cc = "1.0.54"
