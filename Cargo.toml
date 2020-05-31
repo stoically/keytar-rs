@@ -16,3 +16,9 @@ cxx = "0.3.4"
 cxx-build = "0.3.4"
 pkg-config = "0.3.17"
 cc = "1.0.54"
+
+[features]
+docs-rs = []
+
+[package.metadata.docs.rs]
+features = ["docs-rs"]

@@ -1,6 +1,10 @@
-use std::env;
+#[cfg(feature = "docs-rs")]
+fn main() {}
 
+#[cfg(not(feature = "docs-rs"))]
 fn main() {
+    use std::env;
+
     let mut cxx = cxx_build::bridge("src/lib.rs");
 
     let target_os = env::var("CARGO_CFG_TARGET_OS").unwrap();
