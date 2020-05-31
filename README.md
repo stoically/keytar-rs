@@ -14,7 +14,7 @@ let service = "service".to_owned();
 let account = "account".to_owned();
 let password = "password".to_owned();
 
-keytar::ffi::set_password(service, account, password).unwrap();
+keytar::set_password(service, account, password).unwrap();
 ```
 
 ## Linux Requirement

@@ -1,7 +1,8 @@
 //! [keytar](https://github.com/atom/node-keytar) bindings for Rust
 //!
-//! A native Node module to get, add, replace, and delete passwords in system's keychain. On macOS the passwords are managed by the Keychain, on Linux they are managed by the Secret Service API/libsecret,
-//! and on Windows they are managed by Credential Vault.
+//! A native Node module to get, add, replace, and delete passwords in system's keychain.
+//! On macOS the passwords are managed by the Keychain, on Linux they are managed by
+//! the Secret Service API/libsecret, and on Windows they are managed by Credential Vault.
 //!
 //! ```
 //! let service = "service".to_owned();
@@ -12,10 +13,10 @@
 //! # let service = service.clone();
 //! # let account = account.clone();
 //! # let password = password.clone();
-//! keytar::ffi::set_password(service, account, password).unwrap();
+//! keytar::set_password(service, account, password).unwrap();
 //! # }
 //! #
-//! # keytar::ffi::delete_password(service, account).unwrap();
+//! # keytar::delete_password(service, account).unwrap();
 //! ```
 //!
 //! ## Linux Requirement
@@ -39,7 +40,8 @@ pub mod ffi {
     extern "C" {
         include!("src/lib.h");
 
-        /// Save the password for the service and account to the keychain. Adds a new entry if necessary, or updates an existing entry if one exists.
+        /// Save the password for the service and account to the keychain. Adds a new entry if
+        /// necessary, or updates an existing entry if one exists.
         ///
         /// Equivalent to [`setPassword`](https://github.com/atom/node-keytar#setpasswordservice-account-password)
         pub fn set_password(service: String, account: String, password: String) -> Result<()>;
@@ -54,9 +56,11 @@ pub mod ffi {
         /// Equivalent to [`deletePassword`](https://github.com/atom/node-keytar#deletepasswordservice-account)
         pub fn delete_password(service: String, account: String) -> Result<bool>;
 
-        /// Find a password for the service in the keychain. This is ideal for scenarios where an account is not required.
+        /// Find a password for the service in the keychain.
         ///
         /// Equivalent to [`findPassword`](https://github.com/atom/node-keytar#findpasswordservice)
         pub fn find_password(service: String) -> Result<Password>;
     }
 }
+
+pub use ffi::*;
