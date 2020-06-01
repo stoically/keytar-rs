@@ -33,6 +33,11 @@ jobs:
       - name: build
         shell: bash
         run: |
+          # enable symlinking for windows
+          # (required because of patched cxx crate)
+          export MSYS=winsymlinks:nativestrict
+          git config --global core.symlinks true
+
           export DISPLAY=":99"
           git submodule update --init
           cargo test
