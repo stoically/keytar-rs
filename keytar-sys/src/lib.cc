@@ -1,5 +1,6 @@
 #include "src/lib.h"
 #include "src/lib.rs.h"
+#include <stdexcept>
 
 void set_password(rust::String service, rust::String account, rust::String password)
 {
