@@ -25,7 +25,7 @@ dependencies = [
 [[package]]
 name = "cxx"
 version = "0.3.4"
-source = "git+https://github.com/stoically/cxx#a5a788f6d5040ec5e3a3e4aca90653d8fdaea8ee"
+source = "git+https://github.com/stoically/cxx#e068a90fd6d2f156429c563a6be0c3b61beaa308"
 dependencies = [
  "cc",
  "cxxbridge-macro",
@@ -35,7 +35,7 @@ dependencies = [
 [[package]]
 name = "cxx-build"
 version = "0.3.4"
-source = "git+https://github.com/stoically/cxx#a5a788f6d5040ec5e3a3e4aca90653d8fdaea8ee"
+source = "git+https://github.com/stoically/cxx#e068a90fd6d2f156429c563a6be0c3b61beaa308"
 dependencies = [
  "anyhow",
  "cc",
@@ -48,7 +48,7 @@ dependencies = [
 [[package]]
 name = "cxxbridge-macro"
 version = "0.3.4"
-source = "git+https://github.com/stoically/cxx#a5a788f6d5040ec5e3a3e4aca90653d8fdaea8ee"
+source = "git+https://github.com/stoically/cxx#e068a90fd6d2f156429c563a6be0c3b61beaa308"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -74,9 +74,9 @@ dependencies = [
 
 [[package]]
 name = "link-cplusplus"
-version = "1.0.1"
+version = "1.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "628cd9d7b5c99cb930617438a3d7896f5eb734647bc2838ded9ca50689507295"
+checksum = "f563b3814ea63e830e3e321206e4e2b5177854586ebe3f595795ed7053b217f5"
 dependencies = [
  "cc",
 ]
@@ -89,27 +89,27 @@ checksum = "05da548ad6865900e60eaba7f589cc0783590a92e940c26953ff81ddbab2d677"
 
 [[package]]
 name = "proc-macro2"
-version = "1.0.17"
+version = "1.0.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "1502d12e458c49a4c9cbff560d0fe0060c252bc29799ed94ca2ed4bb665a0101"
+checksum = "beae6331a816b1f65d04c45b078fd8e6c93e8071771f41b8163255bbd8d7c8fa"
 dependencies = [
  "unicode-xid",
 ]
 
 [[package]]
 name = "quote"
-version = "1.0.6"
+version = "1.0.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "54a21852a652ad6f610c9510194f398ff6f8692e334fd1145fed931f7fbe44ea"
+checksum = "aa563d17ecb180e500da1cfd2b028310ac758de548efdd203e18f283af693f37"
 dependencies = [
  "proc-macro2",
 ]
 
 [[package]]
 name = "syn"
-version = "1.0.29"
+version = "1.0.31"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bb37da98a55b1d08529362d9cbb863be17556873df2585904ab9d2bc951291d0"
+checksum = "b5304cfdf27365b7585c25d4af91b35016ed21ef88f17ced89c7093b43dba8b6"
 dependencies = [
  "proc-macro2",
  "quote",
