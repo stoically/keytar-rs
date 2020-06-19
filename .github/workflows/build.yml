@@ -18,6 +18,7 @@ jobs:
       - name: ubuntu
         if: matrix.config.os == 'ubuntu-latest'
         run: |
+          sudo apt update
           sudo apt install libsecret-1-dev xvfb dbus-x11 gnome-keyring
 
           # `secret-tool` (https://gitlab.gnome.org/GNOME/libsecret) does not support creating keyrings,
