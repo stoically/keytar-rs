@@ -25,7 +25,7 @@ dependencies = [
 [[package]]
 name = "cxx"
 version = "0.3.4"
-source = "git+https://github.com/stoically/cxx#e068a90fd6d2f156429c563a6be0c3b61beaa308"
+source = "git+https://github.com/stoically/cxx?rev=e068a90#e068a90fd6d2f156429c563a6be0c3b61beaa308"
 dependencies = [
  "cc",
  "cxxbridge-macro",
@@ -35,7 +35,7 @@ dependencies = [
 [[package]]
 name = "cxx-build"
 version = "0.3.4"
-source = "git+https://github.com/stoically/cxx#e068a90fd6d2f156429c563a6be0c3b61beaa308"
+source = "git+https://github.com/stoically/cxx?rev=e068a90#e068a90fd6d2f156429c563a6be0c3b61beaa308"
 dependencies = [
  "anyhow",
  "cc",
@@ -48,7 +48,7 @@ dependencies = [
 [[package]]
 name = "cxxbridge-macro"
 version = "0.3.4"
-source = "git+https://github.com/stoically/cxx#e068a90fd6d2f156429c563a6be0c3b61beaa308"
+source = "git+https://github.com/stoically/cxx?rev=e068a90#e068a90fd6d2f156429c563a6be0c3b61beaa308"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -107,9 +107,9 @@ dependencies = [
 
 [[package]]
 name = "syn"
-version = "1.0.31"
+version = "1.0.32"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b5304cfdf27365b7585c25d4af91b35016ed21ef88f17ced89c7093b43dba8b6"
+checksum = "a994520748611c17d163e81b6c4a4b13d11b7f63884362ab2efac3aa9cf16d00"
 dependencies = [
  "proc-macro2",
  "quote",

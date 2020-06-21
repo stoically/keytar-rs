@@ -10,10 +10,10 @@ readme = "README.md"
 license = "MIT"
 
 [dependencies]
-cxx = { git = "https://github.com/stoically/cxx" }
+cxx = { git = "https://github.com/stoically/cxx", rev = "e068a90" }
 
 [build-dependencies]
-cxx-build = { git = "https://github.com/stoically/cxx" }
+cxx-build = { git = "https://github.com/stoically/cxx", rev = "e068a90" }
 pkg-config = "0.3.17"
 cc = "1.0.54"
 
