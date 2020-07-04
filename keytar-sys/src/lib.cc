@@ -2,7 +2,7 @@
 #include "src/lib.rs.h"
 #include <stdexcept>
 
-void set_password(rust::String service, rust::String account, rust::String password)
+void set_password(rust::Str service, rust::Str account, rust::Str password)
 {
   std::string error;
   keytar::KEYTAR_OP_RESULT result = keytar::SetPassword(std::string(service),
@@ -16,7 +16,7 @@ void set_password(rust::String service, rust::String account, rust::String passw
   }
 }
 
-Password get_password(rust::String service, rust::String account)
+Password get_password(rust::Str service, rust::Str account)
 {
   std::string error;
   std::string password;
@@ -39,7 +39,7 @@ Password get_password(rust::String service, rust::String account)
   }
 }
 
-bool delete_password(rust::String service, rust::String account)
+bool delete_password(rust::Str service, rust::Str account)
 {
   std::string error;
   keytar::KEYTAR_OP_RESULT result = keytar::DeletePassword(std::string(service), std::string(account), &error);
@@ -58,7 +58,7 @@ bool delete_password(rust::String service, rust::String account)
   }
 }
 
-Password find_password(rust::String service)
+Password find_password(rust::Str service)
 {
   std::string error;
   std::string password;
