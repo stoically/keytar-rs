@@ -5,14 +5,14 @@
 //! the Secret Service API/libsecret, and on Windows they are managed by Credential Vault.
 //!
 //! ```
-//! let service = "service".to_owned();
-//! let account = "account".to_owned();
-//! let password = "password".to_owned();
+//! let service = "service";
+//! let account = "account";
+//! let password = "password";
 //!
 //! # {
-//! # let service = service.clone();
-//! # let account = account.clone();
-//! # let password = password.clone();
+//! # let service = service;
+//! # let account = account;
+//! # let password = password;
 //! keytar::set_password(service, account, password).unwrap();
 //! # }
 //! #

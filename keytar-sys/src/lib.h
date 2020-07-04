@@ -4,7 +4,7 @@
 
 struct Password;
 
-void set_password(rust::String service, rust::String account, rust::String password);
-Password get_password(rust::String service, rust::String account);
-bool delete_password(rust::String service, rust::String account);
-Password find_password(rust::String service);
+void set_password(rust::Str service, rust::Str account, rust::Str password);
+Password get_password(rust::Str service, rust::Str account);
+bool delete_password(rust::Str service, rust::Str account);
+Password find_password(rust::Str service);
