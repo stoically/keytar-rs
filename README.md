@@ -10,9 +10,9 @@
 A native Node module to get, add, replace, and delete passwords in system's keychain. On macOS the passwords are managed by the Keychain, on Linux they are managed by the Secret Service API/libsecret, and on Windows they are managed by Credential Vault.
 
 ```rust
-let service = "service".to_owned();
-let account = "account".to_owned();
-let password = "password".to_owned();
+let service = "service";
+let account = "account";
+let password = "password";
 
 keytar::set_password(service, account, password).unwrap();
 ```
