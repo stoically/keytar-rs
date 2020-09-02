@@ -12,6 +12,12 @@ license = "MIT"
 [dependencies]
 keytar-sys = { path = "keytar-sys", version = "0.1.2" }
 
+[features]
+docs-rs = ["keytar-sys/docs-rs"]
+
+[package.metadata.docs.rs]
+features = ["docs-rs"]
+
 [workspace]
 members = [
     "keytar-sys"
