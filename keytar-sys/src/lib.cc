@@ -1,5 +1,5 @@
 #include "src/lib.h"
-#include "src/lib.rs.h"
+#include "keytar-sys/src/lib.rs.h"
 #include <stdexcept>
 
 void set_password(rust::Str service, rust::Str account, rust::Str password)
