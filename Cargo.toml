@@ -1,7 +1,7 @@
 [package]
 name = "keytar"
 description = "keytar bindings to safely interact with operating system keychains"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["stoically <stoically@protonmail.com>"]
 keywords = ["keytar", "libsecret", "keychain", "credential-vault"]
 edition = "2018"
@@ -10,7 +10,7 @@ readme = "README.md"
 license = "MIT"
 
 [dependencies]
-keytar-sys = { path = "keytar-sys", version = "0.1.1" }
+keytar-sys = { path = "keytar-sys", version = "0.1.2" }
 
 [workspace]
 members = [
