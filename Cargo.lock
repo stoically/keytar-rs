@@ -18,9 +18,9 @@ dependencies = [
 
 [[package]]
 name = "cxx"
-version = "0.4.0"
+version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f02d7dd504492d4bfcc8dda58d931f43bbce36d4aac523daa83afa26bb601e7d"
+checksum = "1c261550e69cdfc5bc2dff372d6f8d9e6e96da0f121466f989c39f2898da6121"
 dependencies = [
  "cc",
  "cxxbridge-flags",
@@ -30,28 +30,30 @@ dependencies = [
 
 [[package]]
 name = "cxx-build"
-version = "0.4.0"
+version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "906efa389bccdaf585d3cae1830d13f31ce5dad8ac518b4818dc0d95788f3caa"
+checksum = "58253d176cefc4fe2279333d0d72900b69f217a476cd51ac9b26f663eb08beb1"
 dependencies = [
  "cc",
  "codespan-reporting",
+ "lazy_static",
  "proc-macro2",
  "quote",
+ "scratch",
  "syn",
 ]
 
 [[package]]
 name = "cxxbridge-flags"
-version = "0.4.0"
+version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "104c4151c25346d6a9cf210d59cdb7cec2b00614df4240b090bd2a7621b0b571"
+checksum = "9abce8619d550f10798ea1f5b39c6ba492f6bc73e9751426b1ce51c2299911e9"
 
 [[package]]
 name = "cxxbridge-macro"
-version = "0.4.0"
+version = "1.0.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "39989dd2bd91ea1c9ae6b80597ab22a976869326f16e7ae7258f4e3876fa5663"
+checksum = "e8e6e06c710d250ce40fc68938b363fd7dfee4c74daee60b4abdf7f66d74ab52"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -74,6 +76,12 @@ dependencies = [
  "cxx-build",
  "pkg-config",
 ]
+
+[[package]]
+name = "lazy_static"
+version = "1.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e2abad23fbc42b3700f2f279844dc832adb2b2eb069b2df918f455c4e18cc646"
 
 [[package]]
 name = "link-cplusplus"
@@ -107,6 +115,12 @@ checksum = "aa563d17ecb180e500da1cfd2b028310ac758de548efdd203e18f283af693f37"
 dependencies = [
  "proc-macro2",
 ]
+
+[[package]]
+name = "scratch"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "7e114536316b51a5aa7a0e59fc49661fd263c5507dd08bd28de052e57626ce69"
 
 [[package]]
 name = "syn"

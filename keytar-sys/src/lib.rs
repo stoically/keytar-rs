@@ -7,7 +7,7 @@ pub mod ffi {
         password: String,
     }
 
-    extern "C" {
+    unsafe extern "C++" {
         include!("src/lib.h");
 
         /// Save the password for the service and account to the keychain. Adds a new entry if
