@@ -10,12 +10,12 @@ readme = "README.md"
 license = "MIT"
 
 [dependencies]
-cxx = "0.4.0"
+cxx = "1.0.0"
 
 [build-dependencies]
 pkg-config = "0.3.17"
 cc = "1.0.54"
-cxx-build = "0.4.0"
+cxx-build = "1.0.0"
 
 [features]
 docs-rs = []
