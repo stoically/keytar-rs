@@ -3,8 +3,8 @@ pub mod ffi {
     /// Workaround until `cxx` supports `Option`s
     /// https://github.com/dtolnay/cxx/issues/87
     pub struct Password {
-        success: bool,
-        password: String,
+        pub success: bool,
+        pub password: String,
     }
 
     unsafe extern "C++" {
