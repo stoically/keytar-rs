@@ -7,6 +7,8 @@
 
 [keytar](https://github.com/atom/node-keytar) bindings for Rust
 
+**Note:** You might want to consider using the [keyring](https://crates.io/crates/keyring) crate instead, which is fully written in Rust.
+
 A native Node module to get, add, replace, and delete passwords in system's keychain. On macOS the passwords are managed by the Keychain, on Linux they are managed by the Secret Service API/libsecret, and on Windows they are managed by Credential Vault.
 
 ```rust
